@@ -1,0 +1,37 @@
+projekt del 1:
+
+Hovedopgave: Implementere datastrukturen prioritetskø.
+
+At overføre lærebogens pseudo-kode for prioritetskøer til et python-program og
+derefter teste det, bl.a. ved at bruge det til at sortere tal.
+
+Krav:
+Program navn: PQHeap.py
+1. Skal implementere strukturen Heap. 
+ - Heapen skal bestå af en liste A af tal. (IKKE array.)
+
+2. Programmet SKAL indeholde funktioner:
+- extractMin(A) - Fjern elementet med mindst prioritet fra prioritskøen A og returner det
+- Antag at denne KUN kaldes på en IKKE-TOM prioritetskø.
+
+- insert(A,e) - Indsæt elementet e i prioritetskøen A.
+
+- createEmptyPQ() - returner en ny, tom prioritetskø (tom liste.)
+
+Bemærk at der udover ovenstående funktioner vil være brug for at implementere funktioner til internt brug i programmet.
+
+baser implementation på pseudo-kode i Cormen et al. kapitel 6, siderne 163, 154, 152 og 164.
+(og på sammenskrivning af pseudokoden side 164)
+
+OBS: Du skal lave en MIN-HEAP struktur mens bogen formuler en MAX-HEAP struktur.
+
+Andet vigtigt:
+Find heap-size via len(A).
+
+Her er den justerede python pseudokode:
+LEFT(i) = 2i + 1
+RIGHT(i) = 2i + 2
+PARENT(i) = [(i-1)/2] (måske // for floor?)
+
+Juster anvendelse af indekser og sammenligning af indekser
+
