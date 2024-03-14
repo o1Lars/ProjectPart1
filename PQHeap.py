@@ -11,7 +11,8 @@ def right(i):
 
 
 def extractMin(priority_q):
-    # Chris udkast til denne TODO. 
+    # Chris udkast til denne TODO.
+    # test
     pass
 
 def swap(p1, p2):
