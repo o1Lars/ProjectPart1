@@ -1,6 +1,20 @@
+"""
+This module functions as a program that implements the data structure priority queue.
+
+Requirements
+------------
+Python 3.7 or higher.
+
+Notes
+-----
+Module is created as part of the group project for the final exam of DSXXX Algoritmer og datastrukturer.
+"""
+
+def parent(i:int) -> int:
+    """Return the index of the parent node of i from a heap like data structure
 
 
-def parent(i):
+    """
     return (i-1)//2
     
 def left(i):
@@ -16,7 +30,7 @@ def extractMin(priority_q):
     pass
 
 def swap(p1, p2):
-    
+    pass
 
 def insert(priority_q, num):
 
