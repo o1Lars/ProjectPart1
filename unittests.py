@@ -14,11 +14,16 @@ class TestPriorityQueue(unittest.TestCase):
     #     self.assertEqual(expected_result, actual_result)
     #     self.assertEqual([], my_list)
     
-    # def test_insert(self):
-    #     my_list = [1, 2, 3, 5, 6]
-    #     expected_result = [1, 2, 3, 4, 5, 6]
-    #     actual_result = PQHeap.insert(my_list, 4)
-    #     self.assertEqual(expected_result, actual_result)
+    def test_insert(self):
+        my_list = [34, 645, -45, 1, 34, 0]
+        expected_result = [-45, 0, 1, 34, 34, 645]
+
+        the_list = PQHeap.create_emptyPQ()
+        for element in my_list:
+            the_list = PQHeap.insert(the_list, element)
+            actual_result = the_list
+
+        self.assertEqual(expected_result, actual_result)
     
     def test_parent(self):
         expected_result = 0
