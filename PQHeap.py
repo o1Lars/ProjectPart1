@@ -58,7 +58,7 @@ def swap(p1, p2):
     pass
 
 
-def insert(priority_q: List[int], num: int) -> None:
+def insert(priority_q: List[int], num: int) -> List[int]:
     """
     Insert key into priority_q.
 
@@ -72,10 +72,18 @@ def insert(priority_q: List[int], num: int) -> None:
 
     i = len(priority_q) - 1
 
-    while i > 1 and priority_q[parent(i)] < priority_q[i]:
-        temporary_value = priority_q[parent(i)]
-        # swap places
+    value_of_parent = priority_q[parent(i)]
+    value_of_child = priority_q[i]
+    while i > 0 and value_of_parent > value_of_child:
+        
+        temp = priority_q[parent(i)]
+        priority_q[parent(i)] = priority_q[i]
+        priority_q[i] = temp
+        i = parent(i)
+        value_of_parent = priority_q[parent(i)]
+        value_of_child = priority_q[i]
 
+    return priority_q
 
 def create_emptyPQ():
     """
