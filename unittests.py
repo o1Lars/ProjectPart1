@@ -4,7 +4,7 @@ import PQHeap
 class TestPriorityQueue(unittest.TestCase):
     def test_createEmptyPQ(self):
         expected_result = []
-        actual_result = PQHeap.createEmptyPQ()
+        actual_result = PQHeap.create_emptyPQ()
         self.assertEqual(expected_result, actual_result)
 
     # def test_HeapExtractMin(self):
