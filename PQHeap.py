@@ -85,7 +85,7 @@ def min_heapify(arr: List[int], i: int) -> None:
         min_heapify(arr, smallest)
 
 
-def extract_min(priority_q: List[int]) -> int:
+def extractMin(priority_q: List[int]) -> int:
     """
     Return the key of the element with the least priority from a heap like priority queue data structure
     and keeps the list in min-heap structure
@@ -135,7 +135,7 @@ def insert(priority_q: List[int], num: int) -> List[int]:
     return priority_q
 
 
-def create_emptyPQ():
+def createEmptyPQ():
     """
     Return an empty heap like priority queue data structure
 

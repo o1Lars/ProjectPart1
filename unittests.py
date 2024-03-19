@@ -4,7 +4,7 @@ import PQHeap
 class TestPriorityQueue(unittest.TestCase):
     def test_createEmptyPQ(self):
         expected_result = []
-        actual_result = PQHeap.create_emptyPQ()
+        actual_result = PQHeap.createEmptyPQ()
         self.assertEqual(expected_result, actual_result)
 
     # def test_HeapExtractMin(self):
@@ -18,7 +18,7 @@ class TestPriorityQueue(unittest.TestCase):
         my_list = [34, 645, -45, 1, 34, 0]
         expected_result = [-45, 0, 1, 34, 34, 645]
 
-        the_list = PQHeap.create_emptyPQ()
+        the_list = PQHeap.createEmptyPQ()
         for element in my_list:
             the_list = PQHeap.insert(the_list, element)
             actual_result = the_list
@@ -38,21 +38,21 @@ class TestPriorityQueue(unittest.TestCase):
         actual_result = PQHeap.parent(5)
         self.assertEqual(expected_result, actual_result)
 
-    def test_extract_min(self):
+    def test_extractMin(self):
         # Initialize variables
         my_list = [-45, 1, 0, 645, 34, 34]
         expected_list = [0, 1, 645, 34, 34]
         expected_min = -45
 
         # perform test
-        min_val = PQHeap.extract_min(my_list)
+        min_val = PQHeap.extractMin(my_list)
 
         # Check result
         self.assertEqual(expected_list, my_list)
         self.assertEqual(expected_min, min_val)
 
-    def test_extract_min_all(self):
-        """Tests that extract_min properly extracts min value and keeps list in min-heap structure"""
+    def test_extractMin_all(self):
+        """Tests that extractMin properly extracts min value and keeps list in min-heap structure"""
         # Initialize variables
         my_list = [-45, 1, 0, 645, 34, 34]
         sorted_list = []
@@ -60,7 +60,7 @@ class TestPriorityQueue(unittest.TestCase):
 
         # Perform test
         for i in range(len(my_list)):
-            sorted_list.append(PQHeap.extract_min(my_list))
+            sorted_list.append(PQHeap.extractMin(my_list))
 
         # Check results
         self.assertEqual([], my_list)               # my_list should be empty
