@@ -1,5 +1,5 @@
 """
-This module functions as a program that implements the data structure priority queue.
+This module provides PQHeap, which creates an instance of the min-heap priority queue data structure
 
 Requirements
 ------------
@@ -10,6 +10,12 @@ Notes
 Module is created as part of the group project for the final exam of DSXXX Algoritmer og datastrukturer.
 """
 from typing import List
+
+
+class CreateHeap():
+    """
+
+    """
 
 
 def parent(i: int) -> int:
