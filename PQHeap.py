@@ -71,11 +71,11 @@ def min_heapify(arr: List[int], i: int) -> None:
     right_child = right(i)  # Right child index
     smallest = i
 
-    # Compare the current node with its left child
+    # Check for its left child
     if left_child < len(arr) and arr[left_child] < arr[smallest]:
         smallest = left_child
 
-    # Compare the current node with its right child
+    # Check for its right child
     if right_child < len(arr) and arr[right_child] < arr[smallest]:
         smallest = right_child
 
@@ -103,9 +103,6 @@ def extractMin(priority_q: List[int]) -> int:
 
     # Return value
     return min_val
-
-def swap(p1, p2):
-    pass
 
 
 def insert(priority_q: List[int], num: int) -> List[int]:
