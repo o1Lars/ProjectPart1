@@ -7,7 +7,17 @@ Python 3.7 or higher.
 
 Notes
 -----
-Module is created as part of the group project for the final exam of DSXXX Algoritmer og datastrukturer.
+Module is created as part of the group project for the final exam of DS814 Algoritmer og Datastrukturer forår 2024.
+
+Projektgrupe:
+Chris Thorbjørn Eichmuller Vandborg
+cvand15@student.sdu.dk
+cvand15
+
+Lars Mogensen
+lmoge23@student.sdu.dk
+
+
 """
 from typing import List
 
